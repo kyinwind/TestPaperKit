@@ -2,20 +2,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "TestPaper",
+    name: "TestPaperKit",
     platforms: [
         .iOS(.v17),
         .macOS(.v14)
     ],
     products: [
         .library(
-            name: "TestPaper",
-            targets: ["TestPaper"]
+            name: "TestPaperKit",
+            targets: ["TestPaperKit"]
         )
     ],
     targets: [
         .target(
-            name: "TestPaper",
+            name: "TestPaperKit",
             path: "Sources/TestPaper"
         )
     ]
