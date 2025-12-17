@@ -16,7 +16,7 @@ let package = Package(
     targets: [
         .target(
             name: "TestPaperKit",
-            path: "Sources/TestPaper"
+            path: "Sources/TestPaperKit"
         )
     ]
 )
