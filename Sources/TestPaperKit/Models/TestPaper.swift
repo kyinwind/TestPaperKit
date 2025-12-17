@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 //一套试卷的结构，包含试卷名称、时长和题目列表
 public struct TestPaper: Identifiable, Codable {
     public let id: UUID
@@ -19,5 +20,11 @@ public struct TestPaper: Identifiable, Codable {
 
     public var totalScore: Int {
         questions.reduce(0) { $0 + $1.score }
+    }
+    
+    static public func importJSON(_ json: String) throws -> TestPaper{
+        let data = Data(json.utf8)
+        let paper = try JSONDecoder().decode(TestPaper.self, from: data)
+        return paper
     }
 }
